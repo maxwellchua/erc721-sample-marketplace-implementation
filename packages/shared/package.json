@@ -1,0 +1,23 @@
+{
+  "name": "@monofu/shared",
+  "version": "1.0.0",
+  "private": true,
+  "main": "lib/index.ts",
+  "scripts": {
+    "build": "dotenv -e ../../.env -- tsc",
+    "build:watch": "dotenv -e ../../.env -- tsc --watch --preserveWatchOutput",
+    "start": "dotenv -e ../../.env -- yarn build:watch"
+  },
+  "dependencies": {
+    "fetch-dedupe": "^3.0.0",
+    "humps": "^2.0.1",
+    "mobx": "^6.2.0",
+    "mobx-keystone": "^0.56.0",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@monofu/eslint-config": "*",
+    "@types/humps": "^2.0.0",
+    "@types/react": "^17.0.3"
+  }
+}

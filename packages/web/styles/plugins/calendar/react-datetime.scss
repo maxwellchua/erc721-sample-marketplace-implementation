@@ -1,0 +1,93 @@
+.dark-picker {
+  .rdtPicker {
+    width: 100%;
+    background: $clr-gray-dark;
+    border-color: $clr-gray;
+
+    thead {
+      tr:first-of-type {
+        th:hover {
+          color: $clr-black;
+          background: $clr-cyan-light;
+        }
+      }
+    }
+
+    th {
+      &.rdtDisabled {
+        color: $clr-gray-light;
+
+        &:hover {
+          color: $clr-gray-light;
+        }
+      }
+    }
+
+    td {
+      &.rdtDay,
+      &.rdtHour,
+      &.rdtMinute,
+      &.rdtSecond {
+        &:hover {
+          color: $clr-black;
+          background: $clr-cyan-light;
+        }
+      }
+
+      &.rdtOld,
+      &.rdtNew {
+        color: $clr-gray-light;
+      }
+
+      &.rdtToday:before {
+        border-bottom-color: $clr-cyan;
+      }
+
+      &.rdtActive {
+        background-color: $clr-cyan;
+        color: $clr-black;
+
+        &:hover {
+          background-color: $clr-cyan;
+          color: $clr-black;
+        }
+
+        &.rdtToday:before {
+          border-bottom-color: $clr-black;
+        }
+      }
+
+      &.rdtMonth,
+      &.rdtYear {
+        &:hover {
+          color: $clr-black;
+          background: $clr-cyan-light;
+        }
+      }
+
+    }
+
+    button {
+      &:hover {
+        color: $clr-black;
+        background: $clr-cyan-light;
+      }
+    }
+
+    .rdtTimeToggle:hover {
+      color: $clr-black;
+      background: $clr-cyan-light;
+    }
+  }
+
+  .rdtCounter {
+    .rdtCount {
+      height:auto;
+    }
+
+    .rdtBtn:hover {
+      color: $clr-black;
+      background: $clr-cyan-light;
+    }
+  }
+}

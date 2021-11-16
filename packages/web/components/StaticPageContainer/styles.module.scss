@@ -1,0 +1,15 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: $gl-spacer-m 1.25rem;
+  width: 100%;
+
+  @include media-breakpoint-up(sm){
+    padding: $gl-spacer-xl 5rem;
+  }
+
+
+  @include media-breakpoint-up(lg) {
+    padding: $gl-spacer-4xl calc((1/3 * 100%) / 2);
+  }
+}

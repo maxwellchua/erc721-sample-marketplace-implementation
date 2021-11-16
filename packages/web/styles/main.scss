@@ -1,0 +1,29 @@
+@import "variables";
+
+// Vendors
+@import "vendors/bootstrap";
+
+@import "mixins";
+@import "utilities";
+
+// Reset
+html {
+  font-size: $gl-font-size-base;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@import "plugins/calendar/react-datetime.scss";
+@import "plugins/celo-tools/use-contractkit.scss";

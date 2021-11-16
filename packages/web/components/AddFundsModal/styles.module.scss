@@ -1,0 +1,44 @@
+.modalHeader {
+  background-color: $clr-gray-darker;
+  border-bottom: 0;
+  justify-content: center;
+
+  :global(.modal-title) {
+    font-size: $gl-font-size-m;
+  }
+
+  :global(.close) {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    span:first-of-type {
+      color: $clr-white;
+    }
+  }
+}
+
+.buttonLink {
+  border-radius: $gl-spacer-3xs;
+  font-weight: $font-weight-normal;
+  height: 100%;
+  width: 100%;
+
+
+  &:hover {
+    border-color: $clr-white;
+  }
+
+  &:focus,
+  :global(.focus){
+    box-shadow: none;
+  }
+
+  img {
+    height: 50px;
+    margin-bottom: $gl-spacer-s;
+    width: 50px;
+  }
+
+}

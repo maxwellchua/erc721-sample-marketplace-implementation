@@ -1,0 +1,28 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pageContent {
+  flex: 1;
+  position: relative;
+  padding-bottom: 2.5rem;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 3.75rem;
+  }
+
+  &.pageContentBg {
+    background: url("/static/images/backgrounds/Stars_v2.jpg") repeat-y;
+    background-size: cover;
+  }
+}
+
+.pageFooter {
+  flex-shrink: 0;
+}
+
+.pageNavigationBar {
+  flex-shrink: 0;
+}

@@ -1,0 +1,117 @@
+/*
+ * index.tsx
+ */
+
+.pageHeader {
+  padding-top: $gl-spacer-l;
+  padding-bottom: $gl-spacer-s;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 4.438rem;
+    padding-bottom: 5.688rem;
+  }
+}
+
+.pageTitle {
+  @include line-height(55px, $gl-font-size-6xl);
+
+  font-size: $gl-font-size-6xl;
+  margin-bottom: $gl-spacer-s;
+}
+
+.pageDescription {
+  @include line-height(36px, $gl-font-size-m);
+
+  color: $clr-cyan-dark;
+  font-size: $gl-font-size-m;
+}
+
+/*
+ * Common
+ */
+
+.sectionTitle {
+  @include line-height(24px, $gl-font-size-base);
+
+  color: $clr-cyan-dark;
+  font-weight: 500;
+  margin-bottom: $gl-spacer-l;
+
+  @include media-breakpoint-up(lg) {
+    @include line-height(36px, $gl-font-size-3xl);
+
+    font-size: $gl-font-size-3xl;
+    font-weight: $font-weight-bold;
+  }
+
+  &.accountInfoTitle {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $gl-spacer-xl;
+    }
+  }
+}
+
+.label {
+  @include line-height(12px, $gl-spacer-xs);
+
+  text-transform: uppercase;
+  font-size: $gl-spacer-xs;
+  font-weight: $font-weight-bold;
+
+  @include media-breakpoint-up(lg){
+    @include line-height(36px, $gl-font-size-3xl);
+
+    font-size: $gl-font-size-3xl;
+    text-transform: unset;
+  }
+}
+
+.textarea {
+  resize: none;
+}
+
+
+.profilePhotoForm {
+  border-bottom: 1px solid #e6e8ec;
+  border-top: 1px solid #e6e8ec;
+  margin-bottom: $gl-spacer-l;
+  padding-bottom: $gl-spacer-l;
+  padding-top: $gl-spacer-l;
+
+
+  @include media-breakpoint-up(lg) {
+    border-bottom: 0;
+    border-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+.profilePhotoText {
+  @include line-height(29px, $gl-font-size-base);
+
+  color: $clr-cyan-dark;
+  font-size: $gl-font-size-base;
+  margin-bottom: $gl-spacer-s;
+}
+
+.socialForm {
+  border-bottom: 1px solid #e6e8ec;
+  margin-bottom: 2.5rem;
+  padding-bottom: $gl-spacer-2xs;
+
+  @include media-breakpoint-up(lg) {
+    border-bottom: 0;
+    margin-bottom: $gl-spacer-l;
+    padding-bottom: 0;
+  }
+}
+
+.updateSettingsButton {
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: unset;
+  }
+}

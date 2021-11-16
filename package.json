@@ -1,0 +1,46 @@
+{
+  "name": "@monofu/monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run build",
+    "dev": "(yarn workspace @monofu/shared build) && (concurrently --kill-others-on-fail -n web,shared \"yarn workspace @monofu/web dev\" \"yarn workspace @monofu/shared build:watch\")",
+    "prepare": "is-ci || husky install"
+  },
+  "dependencies": {
+    "dotenv-cli": "^4.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "concurrently": "^6.0.1",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^6.0.0",
+    "is-ci": "^3.0.0",
+    "lerna": "^3.19.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.4",
+    "yarnhook": "^0.5.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-merge": "yarnhook",
+      "post-checkout": "yarnhook",
+      "post-rewrite": "yarnhook"
+    }
+  },
+  "lint-staged": {
+    "packages/**/*.{ts,tsx,js,jsx,json,css}": [
+      "prettier --single-quote --write"
+    ]
+  }
+}

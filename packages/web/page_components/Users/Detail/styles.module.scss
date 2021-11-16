@@ -1,0 +1,235 @@
+$avatar-size: 214px;
+$tab-border-size: 5px;
+
+.backgroundImageContainer {
+  background-color: $clr-gray;
+  height: 310px;
+  position: relative;
+}
+
+.backgroundImageContainerImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.collectibles {
+  display: grid;
+  gap: $gl-spacer-m;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: center;
+}
+
+.profileAvatar {
+  border: 7px solid $clr-white;
+  box-sizing: content-box;
+  position: absolute;
+  transform: translateY(-50%);
+  left: 50%;
+  margin-left: -(($avatar-size + $gl-spacer-m) / 2);
+
+  @include media-breakpoint-up(lg) {
+    margin-left: 0;
+    left: 0;
+  }
+}
+
+.profileHeader {
+  display: flex;
+  margin-bottom: $gl-spacer-l;
+  position: relative;
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: auto;
+  }
+}
+
+.profileHeaderContent {
+  margin-top: ($avatar-size / 2) + $gl-spacer-xl;
+
+  @include media-breakpoint-up(lg) {
+    margin: $gl-spacer-l 0 0 ($avatar-size + $gl-spacer-m);
+  }
+}
+.profileHeaderInfoValue {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.profilePictureChangeButton {
+  padding: 10px;
+  width: $avatar-size;
+  margin-bottom: $gl-spacer-s;
+}
+
+.profileInfo {
+  display: flex;
+  margin-bottom: $gl-spacer-m;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: $gl-spacer-2xl;
+  }
+}
+
+.profileInfoButtonsContainer {
+  margin-bottom: $gl-spacer-2xl;
+}
+
+.profileInfoSocialMedia {
+  display: flex;
+  justify-content: center;
+  width: $avatar-size;
+
+  position: absolute;
+  left: 50%;
+  margin-left: -(($avatar-size + $gl-spacer-m) / 2);
+  transform: translateY(-100%);
+
+  @include media-breakpoint-up(lg){
+    position: relative;
+    left: unset;
+    margin-left: 0;
+    width: $avatar-size;
+    transform: translateY(-50%);
+  }
+}
+
+.iconContainer {
+  padding-left: $gl-spacer-2xs;
+  padding-right: $gl-spacer-2xs;
+}
+
+.profileInfoSocialMediaIcon {
+  color: $clr-secondary;
+  height: 21px;
+  margin-right: $gl-spacer-s;
+  width: 21px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.profileInfoDescriptionContainer {
+  max-width: 500px;
+
+  @include media-breakpoint-up(lg) {
+    margin-left: $gl-spacer-m;
+  }
+
+  .profileInfoDescription {
+    @include line-height(21px, $gl-font-size-m);
+
+    color: $clr-secondary-dark;
+    font-size: $gl-font-size-m;
+  }
+}
+
+.tabLink {
+  @include line-height(36px, $gl-font-size-m);
+
+  border-bottom: $tab-border-size solid $clr-cyan-dark;
+  color: $clr-cyan-dark;
+  font-size: $gl-font-size-m;
+  font-weight: $font-weight-bold;
+  padding: $gl-spacer-s 0 ($gl-spacer-s - $tab-border-size);
+
+  &:global(.active) {
+    border-color: $clr-cyan;
+    color: $clr-cyan;
+  }
+}
+
+.editorModalContainer {
+  max-width: 1000px;
+}
+
+.editorModal {
+  border-radius: 20px;
+  border: 2px solid $clr-primary;
+  box-shadow: 0 15px 27px rgba(0, 0, 0, 0.09);
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.editorModalContent {
+  padding: $gl-spacer-2xl;
+}
+
+.editorModalFormContent {
+  padding: $gl-spacer-l;
+}
+
+.editorModalInput {
+  padding: $gl-spacer-s;
+}
+
+.editorModalHeader {
+  display: flex;
+  flex-direction: row;
+}
+
+.editorModalSubmit {
+  margin-left: auto;
+  margin-right: $gl-spacer-m;
+}
+
+.avatarModalContainer {
+  max-width: 435px;
+}
+
+.avatarPreview {
+  margin: $gl-spacer-l;
+  width: $avatar-size;
+  height: $avatar-size;
+  border-radius: $avatar-size/2;
+  background-color: rgb(214, 214, 214);
+}
+
+.avatarPreview:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+}
+
+.changeCoverButton,
+.rightButtonContainer {
+  position: absolute;
+  top: 2rem
+}
+
+.addFundsButton
+.editProfileButton {
+  padding: 0.625rem;
+}
+
+.rightButtonContainer {
+  right: 0;
+
+  @include media-breakpoint-up(lg) {
+    right: 2rem;
+  }
+}
+
+.changeCoverButton {
+  padding: $gl-spacer-2xs $gl-spacer-xs;
+  z-index: 10;
+  right: 2rem;
+
+  @include media-breakpoint-up(sm) {
+    right: 5rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    right: 9.5rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    right: 11.375rem;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    right: 17rem;
+  }
+}

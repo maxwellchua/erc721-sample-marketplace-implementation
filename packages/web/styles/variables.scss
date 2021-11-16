@@ -1,0 +1,129 @@
+// Breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1500px,
+);
+
+/*
+ * COLORS
+ */
+
+/* Colors for light theme */
+// $clr-black: #0d0d0d;
+// $clr-blue: #72ddff;
+// $clr-gray-dark: #595959;
+// $clr-gray: #a6a6a6;
+// $clr-gray-light: #f2f2f2;
+// $clr-green-light: #f3fff9;
+// $clr-green: #42d68a;
+// $clr-purple: #7b61ff;
+// $clr-purple-light: #c097ff;
+// $clr-red: #f9595f;
+// $clr-white: #ffffff;
+
+/* Colors for darker theme */
+$clr-black: #121212;
+$clr-blue: #3772FF;
+$clr-cyan: #B4FEFE;
+$clr-cyan-light: #CFE4E4;
+$clr-cyan-dark: #A5AFAE;
+$clr-gray: #555555;
+$clr-gray-light: #999999;
+$clr-gray-dark: #292929;
+$clr-gray-darker: #1E1E1E;
+$clr-purple: #9757D7;
+$clr-purple-light: #cd84fa;
+$clr-red: #F98A8A;
+$clr-white: #ffffff;
+
+$clr-primary: $clr-purple-light;
+$clr-secondary: $clr-cyan;
+$clr-secondary-dark: $clr-cyan-dark;
+$clr-secondary-light: $clr-cyan-light;
+$clr-accent-primary: $clr-blue;
+$clr-accent-secondary: $clr-purple-light;
+$clr-accent-tertiary: $clr-cyan;
+$clr-danger: $clr-red;
+
+$clr-themes: (
+  "primary": $clr-primary,
+  "secondary-dark": $clr-secondary-dark,
+  "secondary": $clr-secondary,
+  "secondary-light": $clr-secondary-light,
+  "accent-primary": $clr-accent-primary,
+  "accent-secondary": $clr-accent-secondary,
+  "accent-tertiary": $clr-accent-tertiary,
+  "danger": $clr-danger,
+);
+
+// Font Size
+$gl-font-size-5xs: 10px;
+$gl-font-size-4xs: 11px;
+$gl-font-size-3xs: 12px;
+$gl-font-size-2xs: 13px;
+$gl-font-size-xs: 14px;
+$gl-font-size-s: 15px;
+$gl-font-size-base: 16px;
+$gl-font-size-m: 18px;
+$gl-font-size-l: 19px;
+$gl-font-size-xl: 20px;
+$gl-font-size-2xl: 22px;
+$gl-font-size-3xl: 24px;
+$gl-font-size-4xl: 28px;
+$gl-font-size-5xl: 36px;
+$gl-font-size-6xl: 48px;
+
+$gl-font-sizes: (
+  "5xs": $gl-font-size-5xs,
+  "4xs": $gl-font-size-4xs,
+  "3xs": $gl-font-size-3xs,
+  "2s": $gl-font-size-2xs,
+  "xs": $gl-font-size-xs,
+  "s": $gl-font-size-s,
+  "base": $gl-font-size-base,
+  "m": $gl-font-size-m,
+  "l": $gl-font-size-l,
+  "xl": $gl-font-size-xl,
+  "2xl": $gl-font-size-2xl,
+  "3xl": $gl-font-size-3xl,
+  "4xl": $gl-font-size-4xl,
+  "5xl": $gl-font-size-5xl,
+  "6xl": $gl-font-size-6xl,
+);
+
+// Spacing
+$gl-spacer-4xs: 2px; // 0.125rem
+$gl-spacer-3xs: 4px; // 0.25rem
+$gl-spacer-2xs: 8px; // 0.5rem
+$gl-spacer-xs: 12px; // 0.75rem
+$gl-spacer-s: 16px; // 1rem
+$gl-spacer-m: 24px; // 1.5rem
+$gl-spacer-l: 32px; // 2rem
+$gl-spacer-xl: 48px; // 3rem
+$gl-spacer-2xl: 72px; // 4.5rem
+$gl-spacer-3xl: 96px; // 6rem
+$gl-spacer-4xl: 128px; // 8rem
+
+$gl-spacers: (
+  "4xs": $gl-spacer-4xs,
+  "3xs": $gl-spacer-3xs,
+  "2xs": $gl-spacer-2xs,
+  "xs": $gl-spacer-xs,
+  "s": $gl-spacer-s,
+  "m": $gl-spacer-m,
+  "l": $gl-spacer-l,
+  "xl": $gl-spacer-xl,
+  "2xl": $gl-spacer-2xl,
+  "3xl": $gl-spacer-3xl,
+  "4xl": $gl-spacer-4xl,
+);
+
+// Transitions
+$gl-duration-base: 300ms !default;
+$gl-timing-func: ease-in-out !default;
+$gl-transition-base: all $gl-duration-base $gl-timing-func !default;
+$gl-link-transition: ($gl-duration-base / 2) color $gl-timing-func;

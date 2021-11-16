@@ -1,0 +1,2 @@
+web: yarn dev
+api: ./api/.venv/bin/python ./api/manage.py runserver_plus

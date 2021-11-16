@@ -1,0 +1,35 @@
+.celoAddress {
+  .label {
+    color: $clr-cyan-dark;
+    font-weight: $font-weight-bold;
+  }
+
+  .value {
+    color: $clr-white;
+    font-weight: 400;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .label,
+  .value {
+    @include line-height(18px, $gl-font-size-base);
+
+    font-size: $gl-font-size-base;
+    margin-right: $gl-spacer-s;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+
+  .button {
+    border: 0;
+    background-color: transparent;
+    color: $clr-cyan;
+
+    &:focus,
+    &.focus {
+      box-shadow: none;
+    }
+  }
+}

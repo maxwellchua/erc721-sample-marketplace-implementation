@@ -1,0 +1,84 @@
+// ::before is for the switch body
+// ::after is for the switch indicator
+.custom-switch {
+  .custom-control-label {
+    &::before {
+      background-color: $custom-switch-bg;
+      height: $custom-switch-height;
+    }
+
+    &::after {
+      background-color: $custom-switch-indicator-bg;
+      left: -($custom-switch-width + $custom-switch-gutter);
+      top: $custom-switch-indicator-top;
+    }
+  }
+
+  .custom-control-input:focus ~ .custom-control-label {
+    &::before {
+      border-color: $custom-switch-bg;
+      box-shadow: 0 0 0 $input-btn-focus-width $custom-switch-focus-color;
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      background-color: $custom-switch-checked-bg;
+      border-color: $custom-switch-checked-bg;
+    }
+
+    &::after {
+      background-color: $custom-switch-indicator-checked-bg;
+      transform: translateX($custom-switch-width / 2);
+    }
+  }
+
+  .custom-control-input:focus:checked ~ .custom-control-label {
+    &::before {
+      box-shadow: 0 0 0 $input-btn-focus-width $custom-switch-checked-focus-color;
+    }
+  }
+}
+
+.btn-primary,
+.btn-secondary {
+  color: $clr-black;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $clr-black;
+  }
+}
+
+.navbar-toggler {
+  border: 0;
+  padding: $gl-spacer-2xs;
+
+  &.collapsed {
+    padding: $gl-spacer-2xs $gl-spacer-3xs;
+
+    svg {
+      &:first-of-type {
+        display: block;
+      }
+
+      &:last-of-type {
+        display: none;
+      }
+    }
+  }
+
+  svg {
+    &:first-of-type {
+      display: none;
+    }
+
+    &:last-of-type {
+      display: block;
+    }
+  }
+}

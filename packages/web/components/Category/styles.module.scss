@@ -1,0 +1,25 @@
+.category {
+  align-items: center;
+  background-color: $clr-gray-darker;
+  border-radius: 5px;
+  border: 1px solid $clr-gray;
+  box-shadow: none;
+  color: $clr-cyan-light;
+  cursor: pointer;
+  display: flex;
+  font-weight: $font-weight-bold;
+  height: 54px;
+  padding: 0 30px;
+
+  &.active {
+    background-color: $clr-gray-dark;
+    border-color: $clr-cyan;
+    border-width: 2px;
+    box-shadow: 0 15px 27px rgba($clr-cyan, 0.09);
+    color: $clr-white;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}

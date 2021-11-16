@@ -1,0 +1,20 @@
+.header {
+  height: 470px;
+  width: 986px;
+  margin: 60px auto;
+
+  .headerCol {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

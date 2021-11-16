@@ -1,0 +1,185 @@
+.bidder {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: $clr-white;
+}
+
+.viewArtworkButton {
+  border: 0;
+  color: $clr-cyan-light;
+
+  &:hover {
+    color: $clr-cyan-light;
+  }
+
+  &:focus,
+  .focus {
+    box-shadow: none;
+  }
+}
+
+.bidding {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px;
+  width: 100%;
+  height: 196px;
+  background-color: $clr-gray-darker;
+  border: 2px solid $clr-gray;
+  box-sizing: border-box;
+  box-shadow: 0px 15px 27px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+  flex: none;
+  margin: 0px 0px;
+}
+
+.buttonsContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  button,
+  a {
+    width: 100%;
+  }
+}
+
+.costs {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.currency {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.01em;
+  color: $clr-cyan-dark;
+}
+
+.moneyAmount {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 37px;
+  letter-spacing: -0.01em;
+  color: $clr-white;
+}
+
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
+.auctionEndsIn {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: $clr-white;
+}
+
+.biddingContainer {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: $clr-white;
+}
+
+.row {
+  @include media-breakpoint-up(md) {
+    padding: 0 $gl-spacer-l;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 0 3.75rem;
+  }
+}
+
+.backgroundImageContainer {
+  height: 300px;
+}
+
+.backgroundImage {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.leftCol {
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 $gl-spacer-l 0;
+
+  @include media-breakpoint-up(lg) {
+    padding-right: 5rem;
+    padding-bottom: 0;
+
+    justify-content: flex-end;
+  }
+}
+
+.title {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 55px;
+
+  > a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.addedBy {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: $clr-cyan-dark;
+  margin: 20px 0;
+}
+
+.avatarWithInfo {
+  margin: 0 15px;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+}
+
+.countDownContainer {
+  margin-bottom: 1.25rem;
+}
+
+.verticalMargin {
+  @include media-breakpoint-up(lg) {
+    margin: 1.25rem 0;
+    max-width: 26.625rem;
+  }
+}
+
+.instantSale {
+  min-height: 200px;
+}

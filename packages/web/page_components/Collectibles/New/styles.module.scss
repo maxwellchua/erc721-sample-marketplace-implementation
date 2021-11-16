@@ -1,0 +1,351 @@
+.container {
+  display: flex;
+  justify-content: center;
+
+  @include media-breakpoint-up(lg) {
+    justify-content: space-evenly;
+  }
+}
+
+.main {
+  max-width: 700px;
+}
+
+.mainTitle {
+  @include line-height(55px, $gl-font-size-6xl);
+
+  font-size: $gl-font-size-6xl;
+  font-weight: $font-weight-bold;
+}
+
+.mainInfo {
+  @include line-height(36px, $gl-font-size-2xl);
+
+  color: $clr-secondary-dark;
+  font-size: $gl-font-size-2xl;
+}
+
+.sidebar {
+  margin-left: $gl-spacer-l;
+  max-width: 420px;
+  width: 100%;
+}
+
+.sidebarTitle {
+  font-size: $gl-font-size-3xl;
+  font-weight: $font-weight-bold;
+  line-height: 1.5;
+  margin-bottom: $gl-spacer-2xs;
+}
+
+.sidebarCollectible {
+  // border-color: $clr-secondary-light;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  label {
+    @include line-height(36px, $gl-font-size-3xl);
+
+    font-size: $gl-font-size-3xl;
+    font-weight: $font-weight-bold;
+
+    &.smallest {
+      font-weight: $font-weight-base;
+    }
+
+    &.smaller,
+    &.smallest {
+      @include line-height(36px, $gl-font-size-m);
+      font-size: $gl-font-size-m;
+    }
+  }
+
+  small {
+    font-size: $gl-font-size-xs;
+  }
+}
+
+.formCategories {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  margin-top: -$gl-spacer-xs;
+}
+
+.formCategoriesItem {
+  margin: $gl-spacer-xs $gl-spacer-m 0 0;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.formCoverFile {
+  align-items: center;
+  display: flex;
+}
+
+.formCoverFileDetails {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  margin-left: $gl-spacer-xs;
+}
+
+.formCoverFileDetailsName {
+  @include line-height(21px, $gl-font-size-m);
+
+  color: $clr-secondary-dark;
+  font-size: $gl-font-size-m;
+  margin-bottom: $gl-spacer-2xs;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.formCoverFileDetailsReplace {
+  @include line-height(16px, $gl-font-size-xs);
+
+  color: $clr-accent-secondary;
+  display: inline-block;
+  font-size: $gl-font-size-xs;
+  position: relative;
+
+  input {
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.formCoverFileDetailsSize {
+  @include line-height(14px, $gl-font-size-3xs);
+
+  color: $clr-secondary;
+  font-size: $gl-font-size-3xs;
+  font-weight: $font-weight-bold;
+  margin-bottom: $gl-spacer-s;
+}
+
+.formCoverFilePreview {
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  height: 140px;
+  position: relative;
+  width: 140px;
+}
+
+.formFileList {
+  margin: $gl-spacer-2xs 0 $gl-spacer-l;
+}
+
+.formFileListItem {
+  align-items: center;
+  color: $clr-secondary-dark;
+  display: flex;
+  font-size: $gl-font-size-l;
+  margin-bottom: $gl-spacer-xs;
+}
+
+.formFileListItemName {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.formCoverFileRemove,
+.formFileListItemRemove {
+  align-items: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  margin-left: $gl-spacer-xs;
+  outline: none;
+  padding: $gl-spacer-3xs;
+}
+
+.formInputNumber {
+  @include hide-number-arrows();
+
+  text-align: center;
+  width: 100%;
+}
+
+.formLabelRequired {
+  color: $clr-accent-tertiary;
+  font-size: $gl-font-size-m;
+  font-weight: $font-weight-base;
+  line-height: 2;
+}
+
+.formOnSaleInfo {
+  @include line-height(36px, $gl-font-size-l);
+
+  color: $clr-secondary;
+  font-size: $gl-font-size-l;
+}
+
+.formButton {
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: auto;
+    padding: 0 74px;
+    height: 80px;
+  }
+}
+
+.formSubmit {
+  align-items: center;
+  display: flex;
+  font-size: $gl-font-size-xl;
+  justify-content: center;
+
+  span:first-of-type {
+    margin-right: $gl-spacer-2xs;
+  }
+}
+
+.fileUpload {
+  align-items: center;
+  border: 2px dashed $clr-gray;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px $gl-spacer-l;
+  position: relative;
+  width: 100%;
+
+  &.dragging {
+    background-color: #faf8ff;
+    border-color: $clr-accent-secondary;
+
+    .fileUploadIcon,
+    .fileUploadInstructionsTitle,
+    .fileUploadInstructionsSubtitle {
+      visibility: hidden;
+    }
+  }
+}
+
+.fileUploadIcon {
+  color: $clr-secondary-dark;
+  margin-bottom: $gl-spacer-xs;
+}
+
+.fileUploadIconDragging {
+  color: $clr-accent-secondary;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fileUploadInstructionsTitle {
+  color: $clr-secondary-dark;
+  font-size: $gl-font-size-m;
+  font-weight: $font-weight-bold;
+  line-height: 1.333;
+  margin: 0;
+
+  .browse {
+    text-decoration: underline;
+  }
+}
+
+.fileUploadInstructionsSubtitle {
+  color: $clr-secondary-dark;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.fileUploadInstructionsTitle,
+.fileUploadInstructionsSubtitle {
+  text-align: center;
+}
+
+.previousStepButton {
+  align-items: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: $clr-secondary;
+  cursor: pointer;
+  display: flex;
+  font-size: $gl-font-size-3xl;
+  font-weight: $font-weight-bold;
+  margin-top: $gl-spacer-2xl;
+  outline: none;
+}
+
+.purchasingMethodList {
+  .purchasingMethodItem {
+    align-items: center;
+    background-color: $clr-gray-darker;
+    border: 3px solid $clr-gray;
+    border-radius: 5px;
+    color: $clr-cyan-light;
+    display: inline-flex;
+    font-weight: $font-weight-bold;
+    height: 54px;
+    justify-content: center;
+    margin-right: 16px;
+    width: 203px;
+    transition: all 0.15s ease-in-out;
+
+    &.selected {
+      background-color: $clr-gray-dark;
+      border-color: $clr-cyan;
+      color: $clr-white;
+      box-shadow: 0px 15px 27px rgba($clr-cyan, 0.09);
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.formInputRow {
+  display: flex;
+  flex-wrap: wrap;
+
+  .formInputRowItem {
+    margin-right: 0px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.errorMsg {
+  color: $clr-red;
+}
+
+.numberWithUnitsfield {
+  width: 100%;
+}
+
+.previewModalDialog {
+  max-width: 398px;
+}
+
+.loadingModalContent {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  align-items: center;
+}

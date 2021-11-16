@@ -1,0 +1,97 @@
+.title {
+  @include line-height(55px, $gl-font-size-6xl);
+  font-size: $gl-font-size-6xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $gl-spacer-xl;
+}
+
+.content {
+  font-size: $gl-font-size-m;
+  line-height: 2;
+
+  .provider,
+  .section {
+    margin-bottom: $gl-spacer-xl;
+
+  }
+
+  .provider {
+    .providerContent {
+      .providerSection {
+        padding: $gl-spacer-s 0.5rem;
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+
+
+        @include media-breakpoint-up(sm) {
+          margin-left: -2.25rem;
+          margin-right: -2.25rem;
+          padding-left: 2.25rem;
+          padding-right: 2.25rem;
+        }
+
+        &.clickable {
+          cursor: pointer;
+
+          &:hover,
+          &:focus,
+          &:active {
+            background-color: lighten($body-bg, 7%);
+            border-radius: 1rem;
+          }
+        }
+
+        &:first-of-type {
+          margin-bottom: $gl-spacer-s;
+        }
+
+        &:only-of-type {
+          margin-bottom: 0;
+        }
+
+        .iconContainer {
+          float:left;
+
+          .providerIcon {
+            height: 2.625rem;
+            width: 2.625rem;
+          }
+
+          :global(.ledger) {
+            fill: $clr-white;
+          }
+        }
+
+        .links,
+        .description {
+          margin-left: $gl-spacer-2xl;
+
+          p {
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+
+        }
+      }
+
+    }
+
+  }
+}
+
+.modalClose {
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
+  padding: $gl-spacer-3xs;
+  position: absolute;
+  right: $gl-spacer-m;
+  top: $gl-spacer-m;
+
+  svg {
+    color: $clr-cyan-dark;
+  }
+}

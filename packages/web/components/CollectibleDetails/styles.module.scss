@@ -1,0 +1,55 @@
+.collectibleDetails {
+  background-color: $clr-gray-darker;
+  max-width: 61.563rem;
+  border-radius: 1.25rem;
+  padding: 2.5rem $gl-spacer-m;
+
+  @include media-breakpoint-up(lg){
+    padding: 4.375rem 5.063rem;
+  }
+
+  .name {
+    @include line-height(55px, $gl-font-size-6xl);
+
+    color: $clr-white;
+    font-weight: $font-weight-bold;
+    font-size: $gl-font-size-6xl;
+  }
+
+  .description {
+    @include line-height(24px, $gl-font-size-m);
+
+    color: $clr-white;
+    font-size: $gl-font-size-m;
+  }
+
+  .name,
+  .description,
+  .celoAddress,
+  .collectibleOwnerInfo {
+    margin-bottom: $gl-spacer-m;
+  }
+
+
+  .buttons {
+    display: flex;
+
+    .dropdownToggle {
+      margin-right: $gl-spacer-s;
+    }
+
+    .button {
+      background-color: $clr-cyan;
+      border: 0.125rem solid $clr-cyan;
+      border-radius: 3rem;
+      color: $clr-black;
+      width: 3rem;
+      height: 3rem;
+      margin-right: $gl-spacer-s;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}

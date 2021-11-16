@@ -1,0 +1,115 @@
+// Colors
+@each $name, $color in $clr-themes {
+  .c-color-#{$name} {
+    color: $color !important;
+  }
+
+  .c-color-hover-#{$name} {
+    @include hover {
+      color: $color !important;
+      transition: $gl-link-transition;
+    }
+  }
+}
+
+// Font Sizes
+.c-font-size-inherit {
+  font-size: inherit !important;
+}
+
+@each $name, $size in $gl-font-sizes {
+  .c-font-size-#{$name} {
+    font-size: rem($size) !important;
+  }
+}
+
+// Spacing
+@each $bp in map-keys($breakpoints) {
+  @include media-breakpoint-up($bp) {
+    $infix: breakpoint-infix($bp, $breakpoints);
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      .c-#{$abbrev}t-0#{$infix},
+      .c-#{$abbrev}y-0#{$infix} {
+        #{$prop}-top: 0 !important;
+      }
+
+      .c-#{$abbrev}b-0#{$infix},
+      .c-#{$abbrev}y-0#{$infix} {
+        #{$prop}-bottom: 0 !important;
+      }
+
+      .c-#{$abbrev}l-0#{$infix},
+      .c-#{$abbrev}x-0#{$infix} {
+        #{$prop}-left: 0 !important;
+      }
+
+      .c-#{$abbrev}r-0#{$infix},
+      .c-#{$abbrev}x-0#{$infix} {
+        #{$prop}-right: 0 !important;
+      }
+    }
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $spacers {
+        .c-#{$abbrev}-#{$size}#{$infix} {
+          #{$prop}: rem($length) !important;
+        }
+
+        .c-#{$abbrev}t-#{$size}#{$infix},
+        .c-#{$abbrev}y-#{$size}#{$infix} {
+          #{$prop}-top: rem($length) !important;
+        }
+
+        .c-#{$abbrev}r-#{$size}#{$infix},
+        .c-#{$abbrev}x-#{$size}#{$infix} {
+          #{$prop}-right: rem($length) !important;
+        }
+
+        .c-#{$abbrev}b-#{$size}#{$infix},
+        .c-#{$abbrev}y-#{$size}#{$infix} {
+          #{$prop}-bottom: rem($length) !important;
+        }
+
+        .c-#{$abbrev}l-#{$size}#{$infix},
+        .c-#{$abbrev}x-#{$size}#{$infix} {
+          #{$prop}-left: rem($length) !important;
+        }
+      }
+
+      // Some special margin utils
+      .c-#{$abbrev}-0#{$infix} {
+        #{$prop}: 0 !important;
+      }
+      .c-#{$abbrev}-auto#{$infix} {
+        #{$prop}: auto !important;
+      }
+
+      .c-#{$abbrev}t-auto#{$infix},
+      .c-#{$abbrev}y-auto#{$infix} {
+        #{$prop}-top: auto !important;
+      }
+
+      .c-#{$abbrev}r-auto#{$infix},
+      .c-#{$abbrev}x-auto#{$infix} {
+        #{$prop}-right: auto !important;
+      }
+
+      .c-#{$abbrev}b-auto#{$infix},
+      .c-#{$abbrev}y-auto#{$infix} {
+        #{$prop}-bottom: auto !important;
+      }
+
+      .c-#{$abbrev}l-auto#{$infix},
+      .c-#{$abbrev}x-auto#{$infix} {
+        #{$prop}-left: auto !important;
+      }
+
+      .c-#{$abbrev}b-0-last-child#{$infix} {
+        > *:last-child {
+          #{$prop}-bottom: 0 !important;
+        }
+      }
+    }
+  }
+}

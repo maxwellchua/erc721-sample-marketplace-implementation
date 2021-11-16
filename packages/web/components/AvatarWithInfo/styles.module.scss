@@ -1,0 +1,49 @@
+.avatarWithInfo {
+  max-width: 823px;
+
+  .label {
+    @include line-height(21px, $gl-font-size-m);
+
+    color: $clr-cyan-dark;
+    font-size: $gl-font-size-m;
+    margin-right: $gl-spacer-s;
+  }
+
+  .description {
+    @include line-height(24px, $gl-font-size-m);
+
+    color: $clr-white;
+    font-size: $gl-font-size-m;
+
+    &.before {
+      margin: 0;
+      margin-bottom: $gl-spacer-m;
+    }
+
+    &.after {
+      margin: 0;
+      margin-top: $gl-spacer-m;
+    }
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 90px;
+    border: 2px solid $clr-gray;
+    padding: $gl-spacer-3xs;
+    padding-right: $gl-spacer-xs;
+    max-width: 250px;
+    cursor: pointer;
+
+    .avatar {
+      margin-right: $gl-spacer-xs;
+    }
+
+    .displayName {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

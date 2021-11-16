@@ -1,0 +1,42 @@
+.formInputNumberWithUnitsContainer {
+    align-items: stretch;
+    display: flex;
+
+    .formInputNumber {
+      @include hide-number-arrows();
+
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      text-align: center;
+      width: 100%;
+
+      &.invalid {
+        border-color: $clr-red;
+      }
+    }
+
+    .formInputNumberUnits {
+      @include transition(background-color 0.15s ease-in-out);
+
+      align-items: center;
+      background-color: $input-border-color;
+      border-bottom-right-radius: $input-border-radius;
+      border-top-right-radius: $input-border-radius;
+      color: $clr-white;
+      display: flex;
+      font-weight: $font-weight-bold;
+      justify-content: center;
+      min-width: 70px;
+      padding: 0 $gl-spacer-xs;
+
+      &.focused {
+        color: $clr-black;
+        background-color: $input-focus-border-color;
+      }
+
+      &.invalid {
+        color: $input-color;
+        background-color: $clr-red;
+      }
+    }
+  }

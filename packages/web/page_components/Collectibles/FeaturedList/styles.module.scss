@@ -1,0 +1,47 @@
+.collectibles {
+  display: grid;
+  gap: $gl-spacer-m;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: space-between;
+}
+
+.headerFilters {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  margin-top: -$gl-spacer-xs;
+}
+
+.headerFiltersButton {
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
+  margin-left: $gl-spacer-m;
+  padding: $gl-spacer-3xs;
+}
+
+.headerFiltersItem {
+  margin: $gl-spacer-xs $gl-spacer-m 0 0;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.carousel-inner .carousel-item-end.active,
+.carousel-inner .carousel-item-next {
+  transform: translateX(25%);
+}
+
+.carousel-inner .carousel-item-start.active,
+.carousel-inner .carousel-item-prev {
+  transform: translateX(-25%);
+}

@@ -1,0 +1,17 @@
+.loginBox {
+  background-color: #1e1e1e;
+  border: 2px solid #555;
+  max-width: 30rem;
+  width: 100%;
+  padding: $gl-spacer-xl;
+  margin-right: auto;
+  margin-left: auto;
+
+  .logoContainer {
+    height: 4rem;
+  }
+
+  // .divider {
+  //   border-color: $clr-gray;
+  // }
+}

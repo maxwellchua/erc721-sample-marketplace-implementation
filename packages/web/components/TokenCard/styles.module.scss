@@ -1,0 +1,322 @@
+.collectible {
+  background-color: $clr-gray-darker;
+  border-radius: 20px;
+  border: 1px solid $clr-gray;
+  display: flex;
+  flex-direction: column;
+  padding: $gl-spacer-m $gl-spacer-m 0;
+  cursor: pointer;
+  max-width: 398px;
+}
+
+.collectibleContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: $gl-spacer-m 0;
+}
+
+.collectibleFavorite {
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  outline: none;
+  padding: 0;
+}
+
+.collectibleHeader {
+  align-items: center;
+  display: flex;
+  font-size: $gl-font-size-m;
+  font-weight: $font-weight-bold;
+  justify-content: space-between;
+}
+
+.collectibleHeaderText {
+  @include line-height(20px, $gl-font-size-m);
+
+  margin-right: $gl-spacer-2xs;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.collectibleHeaderTextName {
+  white-space: nowrap;
+}
+
+.collectibleContentButton {
+  border-width: 1px;
+  height: 60px;
+  width: 100%;
+}
+
+.collectibleContentImage {
+  background-color: $clr-gray-light;
+  border-radius: 10px;
+  height: 300px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.collectibleContentImageImg {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.collectibleContentImagePreview {
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.collectibleContentQuantity {
+  color: $clr-cyan-dark;
+  font-size: $gl-font-size-m;
+}
+
+.collectibleContentPrice {
+  align-items: baseline;
+  display: flex;
+  font-size: $gl-font-size-3xl;
+  font-weight: 900;
+  line-height: 1.25;
+
+  > span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &:first-child {
+      padding-right: $gl-spacer-s;
+    }
+  }
+}
+
+.collectibleNotForSale {
+  color: $clr-cyan-dark;
+}
+
+.form {
+  label {
+    @include line-height(21px, $gl-font-size-m);
+
+    color: $clr-cyan-dark;
+    font-size: $gl-font-size-m;
+    margin-bottom: 1.313rem;
+  }
+}
+
+.modalDialog {
+  @include media-breakpoint-up(lg) {
+    max-width: 61.875rem;
+  }
+}
+
+.modalContent {
+  border-radius: 1.25rem;
+  border: 0.188rem solid $clr-gray;
+  box-shadow: 0 0.938rem 1.688rem rgba(0, 0, 0, 0.09);
+  overflow: hidden;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+  }
+}
+
+.modalLeft {
+  @include media-breakpoint-up(lg) {
+    flex: 1 1 auto;
+    width: auto;
+
+    padding: 4.375rem 2.5rem;
+  }
+}
+
+.modalLeftTitle {
+  @include line-height(40px, $gl-font-size-3xl);
+
+  font-size: $gl-font-size-3xl;
+  font-weight: $font-weight-bold;
+
+  margin-bottom: $gl-spacer-l;
+
+  @include media-breakpoint-up(lg) {
+    @include line-height(36px, $gl-font-size-3xl);
+
+    margin-bottom: 1.75rem;
+  }
+}
+
+.modalLeftContent {
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+  }
+}
+
+.modalLeftContentImage {
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: 7.875rem;
+  width: 7.875rem;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: $gl-spacer-s;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+    margin-right: 2.25rem;
+  }
+}
+
+.modalLeftContentName {
+  color: $clr-white;
+  font-weight: $font-weight-bold;
+  padding-bottom: $gl-spacer-s;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 0.875rem;
+  }
+}
+
+.modalLeftContentField {
+  padding-bottom: 0.875rem;
+}
+
+.modalLeftContentLabel {
+  color: $clr-cyan-dark;
+  font-weight: 400;
+}
+
+.modalLeftContentValueContainer {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modalLeftContentName,
+.modalLeftContentLabel,
+.modalLeftContentValue,
+.modalLeftContentText {
+  @include line-height(21px, $gl-font-size-m);
+
+  font-size: $gl-font-size-m;
+}
+
+.modalRight {
+  background-color: $clr-gray-dark;
+
+  @include media-breakpoint-up(lg) {
+    flex: 0 0 33%;
+    width: 33%;
+
+    padding: 4.188rem 5.25rem 4.188rem 2.5rem;
+  }
+}
+
+.modalRightSuccess {
+  // background: linear-gradient(180deg, #a8e8cb 0%, #90d7b7 100%);
+  background: linear-gradient(180deg, $clr-cyan-light 0%, $clr-cyan 100%);
+  color: $clr-black;
+}
+
+.modalClose {
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
+  padding: $gl-spacer-3xs;
+  position: absolute;
+  right: $gl-spacer-m;
+  top: $gl-spacer-m;
+
+  svg {
+    color: $clr-cyan-dark;
+  }
+}
+
+.modelRightContentSucces,
+.modalRightContent {
+  margin-bottom: 1.75rem;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 3.75rem;
+  }
+}
+
+.modelRightContentSucces {
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.modalRightContentTitle {
+  @include line-height(21px, $gl-font-size-m);
+
+  color: $clr-secondary-dark;
+  font-size: $gl-font-size-m;
+  margin-bottom: 14px;
+}
+
+.modalRightContentPrice {
+  @include line-height(32px, $gl-font-size-4xl);
+
+  color: $clr-accent-secondary;
+  font-size: $gl-font-size-4xl;
+  font-weight: $font-weight-bold;
+}
+
+.modalRightTitle {
+  @include line-height(36px, $gl-font-size-3xl);
+
+  font-size: $gl-font-size-3xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: 1.75rem;
+}
+
+.modalRightButton {
+  height: 60px;
+  width: 100%;
+}
+
+.modalLeft,
+.modalRight {
+  padding: $gl-spacer-l;
+
+  @include media-breakpoint-up(sm) {
+    padding: $gl-spacer-xl;
+  }
+}
+
+.formInvalid {
+  margin-top: $gl-spacer-2xs;
+  font-size: $gl-font-size-xs;
+  font-weight: 400;
+  color: $clr-red;
+}
+
+.stackingEffect {
+  box-shadow:
+    /* The second layer */ 0 10px 0 -5px $clr-black,
+    /* The second layer shadow */ 0 10px 1px -3.4px $clr-gray,
+    /* The third layer */ 0 20px 0 -10px $clr-black,
+    /* The third layer shadow */ 0 20px 1px -8.5px $clr-gray;
+}
+
+.copyButton {
+  border: 0;
+  background-color: transparent;
+  color: $clr-cyan;
+
+  &:focus,
+  &.focus {
+    box-shadow: none;
+  }
+}

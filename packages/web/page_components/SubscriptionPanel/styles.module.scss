@@ -1,0 +1,124 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  height: 380px;
+  // background-image: linear-gradient(to right, #e9186c, #ac0285, #5d09a9);
+  background-color: $clr-gray-dark;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.subscribeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 282.03px;
+  height: 58.33px;
+  filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.1));
+  // background-color: #ffffff;
+  background-color: $clr-cyan;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+.subscribeText {
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 36px;
+  background-color: $clr-black;
+  // background-image: linear-gradient(to right, #e9186c, #ac0285, #5d09a9);
+}
+
+.subscribeForExclusive {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.neverMiss {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  padding: $gl-spacer-s;
+  box-shadow: 0px 64px 64px -48px rgba(31, 47, 70, 0.12);
+  border-radius: 20px;
+}
+
+
+.modalTitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+}
+
+.closeIconContainer {
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
+  padding: 4px;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.emailInput {
+  outline: 0;
+  border-width: 0 0 2px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: $gl-spacer-2xs;
+}
+
+.errorMsg {
+  color: $clr-red;
+  align-self: center;
+  margin-top: 0;
+}
+
+.headerText {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 56px;
+  text-align: center;
+}
+
+.mainText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+{
+  "extends": "@monofu/eslint-config",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}

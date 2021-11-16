@@ -1,0 +1,19 @@
+ .tw-dark {
+  .ReactModal__Overlay--after-open {
+    z-index: 1200;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .dark\:tw-bg-gray-800 {
+    background-color: $clr-black !important;
+  }
+
+}
+
+.hover\:tw-text-blue-600:hover {
+  color: $clr-cyan !important;
+}
+
+.tw-text-blue-800 {
+  color: $clr-cyan-light !important;
+}

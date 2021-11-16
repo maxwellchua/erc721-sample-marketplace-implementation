@@ -1,0 +1,22 @@
+.title {
+  @include line-height(55px, $gl-font-size-6xl);
+  font-size: $gl-font-size-6xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $gl-spacer-xl;
+  text-align: center;
+}
+
+.content {
+  font-size: $gl-font-size-m;
+  line-height: 2;
+
+  .section {
+    margin-bottom: $gl-spacer-xl;
+
+    h4 {
+      text-align: center;
+    }
+  }
+}
+
+

@@ -1,0 +1,106 @@
+// Body
+$body-bg: $clr-black;
+$body-color: $clr-white;
+
+$link-color: $clr-cyan;
+$link-hover-color: $clr-cyan;
+
+// Breakpoints
+$grid-breakpoints: $breakpoints;
+
+// Buttons
+$btn-border-radius: 3.75rem;
+$btn-border-radius-lg: $btn-border-radius;
+$btn-border-radius-sm: $btn-border-radius;
+
+$btn-font-weight: 700;
+$btn-padding-x: 1.7rem;
+$btn-padding-y: 0.7rem;
+
+$btn-font-size-sm: $gl-font-size-xs;
+$btn-font-weight-sm: 600;
+$btn-padding-x-sm: 1.5rem;
+$btn-padding-y-sm: 0.6875rem;
+$btn-line-height-sm: 1;
+
+// Colors
+$primary: $clr-primary;
+$secondary: $clr-secondary;
+$danger: $clr-danger;
+
+// Forms
+$custom-switch-gutter: (4px / $gl-font-size-base) * 1rem;
+$custom-switch-height: (30px / $gl-font-size-base) * 1rem;
+$custom-switch-width: (62px / $gl-font-size-base) * 1rem;
+
+$custom-switch-bg: $clr-gray-dark;
+$custom-switch-focus-color: rgba($custom-switch-bg, 0.25);
+$custom-switch-checked-bg: $clr-cyan;
+$custom-switch-checked-focus-color: rgba($custom-switch-checked-bg, 0.25);
+
+$custom-switch-indicator-bg: $clr-white;
+$custom-switch-indicator-border-radius: (30px / $gl-font-size-base) * 1rem;
+$custom-switch-indicator-size: (22px / $gl-font-size-base) * 1rem;
+$custom-switch-indicator-top: (8px / $gl-font-size-base) * 1rem;
+$custom-switch-indicator-checked-bg: $clr-black;
+
+$form-group-margin-bottom: $gl-spacer-l;
+
+
+$input-bg: $clr-gray-dark;
+$input-border-color: $clr-gray;
+$input-border-radius: (5px / $gl-font-size-base) * 1rem;
+$input-box-shadow: inset 0 1px 1px rgba($input-border-color, .075);
+$input-btn-border-width: 2px;
+$input-color: $clr-white;
+$input-disabled-bg: rgba($input-bg, .3);
+$input-line-height: 2;
+$input-padding-x: (26px / $gl-font-size-base) * 1rem;
+$input-padding-y: (22px / $gl-font-size-base) * 1rem;
+$input-placeholder-color: $clr-gray-light;
+
+
+$input-focus-border-color: lighten($clr-cyan, 10%);
+$input-focus-box-shadow: none;
+
+// Navigation Bar
+$navbar-nav-link-padding-x: $gl-spacer-s;
+
+$navbar-light-color: #777e90 !default;
+$navbar-light-hover-color: rgba($navbar-light-color, .7) !default;
+$navbar-light-active-color: #0d0d0d !default;
+$navbar-light-disabled-color: rgba($navbar-light-color, .3) !default;
+$navbar-light-toggler-border-color: rgba($navbar-light-color, .1) !default;
+$navbar-light-brand-color: #23262F;
+$navbar-light-brand-hover-color: #23262F;
+
+$navbar-dark-color: $clr-cyan-light !default;
+$navbar-dark-hover-color: rgba($navbar-dark-color, .7) !default;
+$navbar-dark-active-color: $clr-cyan !default;
+$navbar-dark-disabled-color: rgba($navbar-dark-color, .3) !default;
+$navbar-dark-toggler-border-color: rgba($navbar-dark-color, .1) !default;
+$navbar-dark-brand-color: $clr-white;
+$navbar-dark-brand-hover-color: $clr-white;
+
+// Spacing
+$spacers: $gl-spacers;
+
+// Typography
+$hr-border-color: $clr-secondary;
+$hr-border-width: 0.5px;
+$hr-margin-y: $gl-spacer-l;
+
+// Modal
+$modal-content-bg: $clr-black;
+$modal-content-color: $clr-white;
+$modal-content-border-color: $clr-black;
+
+// Dropdown
+$dropdown-bg: $clr-gray-dark;
+$dropdown-color: $clr-white;
+$dropdown-link-color: $clr-white;
+$dropdown-link-active-color: $clr-black;
+$dropdown-link-active-bg:  $clr-cyan;
+$dropdown-link-hover-bg: $clr-cyan-light;
+$dropdown-link-hover-color: $clr-black;
+
